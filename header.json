@@ -1,0 +1,27 @@
+{
+  "name": "Aery",
+  "symbol": null,
+  "level_order": [
+    " 0~10",
+    " 11",
+    " 12",
+    " 13",
+    " 14",
+    " 15",
+    " 16",
+    " 17",
+    " 18",
+    " 19",
+    " 20"
+  ],
+  "folder_order": [ ],
+  "folder_sort_key": "",
+  "folder_sort_ascending": true,
+  "entry_type": "",
+  "data_url": "data.json",
+  "compat_prefix": "LEVEL",
+  "last_update": "2021-11-02",
+  "editor_name": "BeMusicSeeker",
+  "editor_version": "0.3.5.6",
+  "output_date": "2021-11-09"
+}
