@@ -1748,25 +1748,6 @@
     "adddate": "2022-03-26"
   },
   {
-    "md5": "9ece388a4eb59559329b3a26a25746a3",
-    "org_level": 13,
-    "title": "Altostratus [5K Aery Normal]",
-    "artist": "syatten obj: ARAiN",
-    "folder": "LEVEL 13",
-    "level": "LEVEL 13",
-    "lr2_bmsid": null,
-    "url": "",
-    "url_diff": "",
-    "name_diff": null,
-    "org_md5s": [
-      "e4f91575357f3c3a63ebfc0674675869",
-      "9ece388a4eb59559329b3a26a25746a3"
-    ],
-    "org_md5": "e4f91575357f3c3a63ebfc0674675869",
-    "comment": "",
-    "adddate": "2022-03-26"
-  },
-  {
     "md5": "6519f32788fc37fc52e65242a40eb70a",
     "org_level": 13,
     "title": "Always Feel the Same [5Key Aery]",
@@ -5140,25 +5121,6 @@
       "dc7a1a52a5e1d2155329e09945ef05df"
     ],
     "org_md5": "dc7a1a52a5e1d2155329e09945ef05df",
-    "comment": "",
-    "adddate": "2022-03-26"
-  },
-  {
-    "md5": "e4f91575357f3c3a63ebfc0674675869",
-    "org_level": 16,
-    "title": "Altostratus [5K Aery Hard]",
-    "artist": "syatten obj: ARAiN",
-    "folder": "LEVEL 16",
-    "level": "LEVEL 16",
-    "lr2_bmsid": null,
-    "url": "",
-    "url_diff": "",
-    "name_diff": null,
-    "org_md5s": [
-      "e4f91575357f3c3a63ebfc0674675869",
-      "9ece388a4eb59559329b3a26a25746a3"
-    ],
-    "org_md5": "e4f91575357f3c3a63ebfc0674675869",
     "comment": "",
     "adddate": "2022-03-26"
   },
@@ -9554,24 +9516,6 @@
       "48e9960bb6227f58d75c1d1cf9bfd030"
     ],
     "org_md5": "d1e718f02fef2643a514c14867137d8e",
-    "comment": "",
-    "adddate": "2022-03-26"
-  },
-  {
-    "md5": "e5998e8cf262114d7c6e5dbea8cdd644",
-    "org_level": 18,
-    "title": "AutumnBreeze [5key Aery]",
-    "artist": "Grand thaw\/obj.Aery",
-    "folder": "LEVEL 18",
-    "level": "LEVEL 18",
-    "lr2_bmsid": null,
-    "url": "",
-    "url_diff": "",
-    "name_diff": null,
-    "org_md5s": [
-      "e5998e8cf262114d7c6e5dbea8cdd644"
-    ],
-    "org_md5": "e5998e8cf262114d7c6e5dbea8cdd644",
     "comment": "",
     "adddate": "2022-03-26"
   },
