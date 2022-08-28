@@ -1,14 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>;
-<script type="text/javascript" charset="utf8" src="./js/table.js"></script>
-<title></title>
-<meta name="bmstable" content="header.json" />
-</head>
-<body><div id="content">
-<h1>https://hibyethere.github.io/table/</h1>
-</div></body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script
+            type="text/javascript"
+            charset="utf8"
+            src="https://code.jquery.com/jquery-2.1.3.min.js"
+        ></script>
+
+        <script
+            type="text/javascript"
+            charset="utf8"
+            src="./js/table.js"
+        ></script>
+        <title></title>
+        <meta name="bmstable" content="header.json" />
+    </head>
+    <body>
+        <p id="pid"></p>
+
+        <style>
+            body {
+                background: rgb(58, 49, 49);
+            }
+            .blueone {
+                border-collapse: collapse;
+            }
+            .blueone th {
+                padding: 10px;
+                color: rgb(255, 255, 255);
+                border-bottom: 3px solid rgb(188, 201, 206);
+                text-align: center;
+            }
+            .blueone td {
+                color: rgb(255, 255, 255);
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                text-align: center;
+                width: 50%;
+            }
+            .blueone tr:hover td {
+                color: rgb(202, 202, 219);
+            }
+
+            .divider {
+                background: rgb(97, 94, 90);
+            }
+        </style>
+
+        <table class="blueone" border="2">
+            <thead>
+                <th>Level</th>
+                <th>Title</th>
+                <th>Artist</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script type="text/javascript">
+            let xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    jsonFunction(xmlhttp.responseText);
+                }
+            };
+
+            xmlhttp.open("GET", "data.json", true);
+            xmlhttp.send();
+
+            function jsonFunction(resp) {
+                let arr = JSON.parse(resp);
+                let txt = "";
+                let level_test = "";
+
+                for (i = 0; i < arr.length; i++) {
+                    let level = arr[i].level;
+                    let songName = arr[i].title;
+                    let artist = arr[i].artist;
+
+                    let _level = document.createTextNode(level);
+                    let _songName = document.createTextNode(songName);
+                    let _artist = document.createTextNode(artist);
+
+                    let tr = document.createElement("tr");
+
+                    let lv = document.createElement("td");
+                    let nm = document.createElement("td");
+                    let art = document.createElement("td");
+
+                    lv.appendChild(_level);
+                    nm.appendChild(_songName);
+                    art.appendChild(_artist);
+
+                    tr.appendChild(lv);
+                    tr.appendChild(nm);
+                    tr.appendChild(art);
+
+                    let tbody = document.getElementsByTagName("tbody")[0];
+                    if (level_test != level) {
+                        let _level = document.createTextNode(
+                            level +
+                                " (" +
+                                arr.filter((a) => a.level == level).length +
+                                " songs)"
+                        );
+                        let _ = document.createElement("td");
+                        _.setAttribute("colspan", "3");
+                        _.className = "divider";
+                        _.appendChild(_level);
+                        tbody.appendChild(_);
+
+                        level_test = level;
+                    }
+                    tbody.appendChild(tr);
+                }
+                document.getElementById("pid").innerHTML = txt;
+            }
+        </script>
+    </body>
 </html>
