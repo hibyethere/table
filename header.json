@@ -1,5 +1,5 @@
 {
-  "name": "Aery_",
+  "name": "Aery",
   "symbol": "◈",
   "level_order": [
     "DUMMY SONGS ^q^",
@@ -29,8 +29,8 @@
   "entry_type": "",
   "data_url": "data.json",
   "compat_prefix": "",
-  "last_update": "2022-09-03",
+  "last_update": "2022-10-09",
   "editor_name": "BeMusicSeeker",
   "editor_version": "0.3.5.6",
-  "output_date": "2022-09-03"
+  "output_date": "2022-10-09"
 }
