@@ -2,7 +2,6 @@
   "name": "Aery",
   "symbol": "◈",
   "level_order": [
-    "DUMMY SONGS ^q^",
     "LEVEL 2",
     "LEVEL 3",
     "LEVEL 4",
@@ -21,7 +20,8 @@
     "LEVEL 17",
     "LEVEL 18",
     "LEVEL 19",
-    "LEVEL 20"
+    "LEVEL 20",
+    "LEVEL DUMMY"
   ],
   "folder_order": [ ],
   "folder_sort_key": "",

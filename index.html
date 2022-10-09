@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <script
@@ -49,6 +49,33 @@
                 background: rgb(97, 94, 90);
             }
         </style>
+        <div class="title">
+            <p
+                style="
+                    text-align: center;
+                    color: rgb(255, 255, 255);
+                    font-size: 1.7rem;
+                "
+            >
+                Aery 5key Pack
+            </p>
+            <p
+                style="
+                    text-align: center;
+                    color: rgb(255, 255, 255);
+                    font-size: 1rem;
+                "
+                id="update"
+            ></p>
+            <p style="text-align: center">
+                <a href="https://discord.gg/VhQahFaXHd" rel="nofollow"
+                    ><img
+                        src="https://camo.githubusercontent.com/47cdf9d477500a06dca4252b44018a4eeda286806081e2316079cd263ffaf93e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446973636f72642d3538363546323f7374796c653d666c61742d737175617265266c6f676f3d646973636f7264266c6f676f436f6c6f723d7768697465"
+                        data-canonical-src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&amp;logo=discord&amp;logoColor=white"
+                        style="max-width: 100%"
+                /></a>
+            </p>
+        </div>
 
         <table class="blueone" border="2">
             <thead>
@@ -118,6 +145,23 @@
                     tbody.appendChild(tr);
                 }
                 document.getElementById("pid").innerHTML = txt;
+            }
+
+            let xmlhttp2 = new XMLHttpRequest();
+
+            xmlhttp2.onreadystatechange = function () {
+                if (xmlhttp2.readyState == 4 && xmlhttp.status == 200) {
+                    jsonFunction2(xmlhttp2.responseText);
+                }
+            };
+
+            xmlhttp2.open("GET", "header.json", true);
+            xmlhttp2.send();
+
+            function jsonFunction2(resp) {
+                let arr = JSON.parse(resp);
+                document.getElementById("update").innerHTML =
+                    "최종 업데이트: " + arr.last_update;
             }
         </script>
     </body>
