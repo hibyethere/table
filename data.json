@@ -7310,27 +7310,6 @@
     "adddate": "2023-02-03"
   },
   {
-    "md5": "872af952fb819d52bb11cefa25d61532",
-    "org_level": 16,
-    "title": "Lonely Cat [雨]",
-    "artist": "* (Asterisk) \/ obj:スノート 前川みく×多田李衣菜",
-    "folder": "LEVEL 16",
-    "level": "LEVEL 16",
-    "lr2_bmsid": null,
-    "url": "",
-    "url_diff": "",
-    "name_diff": null,
-    "org_md5s": [
-      "8839d8d3ee4896393ff6a07ec0c32898",
-      "82ecf0f194c87cb4a34c5939c13671c4",
-      "872af952fb819d52bb11cefa25d61532",
-      "3028537b892a704449a9b1c5340de0a4"
-    ],
-    "org_md5": "8839d8d3ee4896393ff6a07ec0c32898",
-    "comment": "",
-    "adddate": "2023-02-03"
-  },
-  {
     "md5": "ae597ed65e519c27388f3a0a33175c7b",
     "org_level": 16,
     "title": "LUNASA the Stormcauser [5key Aery]",
@@ -12331,25 +12310,6 @@
       "1ba75ba2104d63623e124fb37edac1b5"
     ],
     "org_md5": "1ba75ba2104d63623e124fb37edac1b5",
-    "comment": "",
-    "adddate": "2023-02-03"
-  },
-  {
-    "md5": "54840bd5791216e0072da4554a706d27",
-    "org_level": 18,
-    "title": "sensitive [5KEY AERY IR]",
-    "artist": "white crystal \/ black train \/まっつん obj.DNF_NONO",
-    "folder": "LEVEL 18",
-    "level": "LEVEL 18",
-    "lr2_bmsid": null,
-    "url": "",
-    "url_diff": "",
-    "name_diff": null,
-    "org_md5s": [
-      "aeed2dd782ce230f76a287be3e55dac1",
-      "54840bd5791216e0072da4554a706d27"
-    ],
-    "org_md5": "aeed2dd782ce230f76a287be3e55dac1",
     "comment": "",
     "adddate": "2023-02-03"
   },
