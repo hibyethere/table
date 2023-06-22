@@ -1,5 +1,5 @@
 {
-  "name": "Aery",
+  "name": "2023-06-22",
   "symbol": "◈",
   "level_order": [
     "LEVEL 2",
@@ -29,8 +29,8 @@
   "entry_type": "",
   "data_url": "data.json",
   "compat_prefix": "",
-  "last_update": "2023-05-09",
+  "last_update": "2023-06-22",
   "editor_name": "BeMusicSeeker",
   "editor_version": "0.3.5.6",
-  "output_date": "2023-05-09"
+  "output_date": "2023-06-22"
 }
