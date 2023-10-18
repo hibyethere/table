@@ -104,8 +104,11 @@
                 let level_test = "";
 
                 let sortedArr = arr.sort(function (a, b) {
-                    const a_num = a.level.split(" ")[1];
-                    const b_num = b.level.split(" ")[1];
+                    let a_num = a.level.split(" ")[1];
+                    let b_num = b.level.split(" ")[1];
+                    
+                    if(a_num == 'DUMMY') a_num = 99;
+                    if(b_num == 'DUMMY') b_num = 99;
 
                     return a_num - b_num;
                 })
