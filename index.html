@@ -127,7 +127,7 @@
 
         for (const folder of Object.keys(level_list)) {
           level_list[folder].sort((a, b) => {
-            return a.title > b.title ? 1 : -1;
+            return a.title.toUpperCase() > b.title.toUpperCase() ? 1 : -1;
           });
         }
 
