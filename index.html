@@ -43,6 +43,7 @@
             }
             .blueone tr:hover td {
                 color: rgb(202, 202, 219);
+                cursor: pointer; 
             }
 
             .divider {
@@ -128,7 +129,7 @@
                     let nm = document.createElement("td");
                     let art = document.createElement("td");
                     
-                    nm.setAttribute('onclick', `window.open('http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${sortedArr[i].md5})','','')`);
+                    nm.setAttribute('onclick', `window.open('http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${sortedArr[i].md5}','','')`);
 
                     lv.appendChild(_level);
                     nm.appendChild(_songName);
