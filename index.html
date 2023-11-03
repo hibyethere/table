@@ -43,6 +43,7 @@
             }
             .blueone tr:hover td {
                 color: rgb(202, 202, 219);
+                cursor: pointer; 
             }
 
             .divider {
@@ -103,10 +104,20 @@
                 let txt = "";
                 let level_test = "";
 
-                for (i = 0; i < arr.length; i++) {
-                    let level = arr[i].level;
-                    let songName = arr[i].title;
-                    let artist = arr[i].artist;
+                let sortedArr = arr.sort(function (a, b) {
+                    let a_num = a.level.split(" ")[1];
+                    let b_num = b.level.split(" ")[1];
+                    
+                    if(a_num == 'DUMMY') a_num = 99;
+                    if(b_num == 'DUMMY') b_num = 99;
+
+                    return a_num - b_num;
+                })
+
+                for (i = 0; i < sortedArr.length; i++) {
+                    let level = sortedArr[i].level;
+                    let songName = sortedArr[i].title;
+                    let artist = sortedArr[i].artist;
 
                     let _level = document.createTextNode(level);
                     let _songName = document.createTextNode(songName);
@@ -117,6 +128,8 @@
                     let lv = document.createElement("td");
                     let nm = document.createElement("td");
                     let art = document.createElement("td");
+                    
+                    tr.setAttribute('onclick', `window.open('http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${sortedArr[i].md5}','','')`);
 
                     lv.appendChild(_level);
                     nm.appendChild(_songName);
@@ -131,7 +144,7 @@
                         let _level = document.createTextNode(
                             level +
                                 " (" +
-                                arr.filter((a) => a.level == level).length +
+                                sortedArr.filter((a) => a.level == level).length +
                                 " songs)"
                         );
                         let _ = document.createElement("td");
