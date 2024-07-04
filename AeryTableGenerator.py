@@ -27,6 +27,7 @@ level_17 = [x for x in input_json if x['folder'] == 'LEVEL 17']
 level_18 = [x for x in input_json if x['folder'] == 'LEVEL 18']
 level_19 = [x for x in input_json if x['folder'] == 'LEVEL 19']
 level_20 = [x for x in input_json if x['folder'] == 'LEVEL 20']
+level_20_ = [x for x in input_json if x['folder'] == 'LEVEL 20+']
 level_dummy = [x for x in input_json if x['folder'] == 'LEVEL DUMMY']
 level_old = [x for x in input_json if x['folder'] == 'OLD CHARTS']
 
@@ -110,6 +111,9 @@ for e in level_19:
 for e in level_20:
     cur.executemany('INSERT INTO Aery VALUES (?, ?, ?)',
                     [(e['md5'], e['folder'], e['level'])])
+for e in level_20_:
+    cur.executemany('INSERT INTO Aery VALUES (?, ?, ?)',
+                    [(e['md5'], e['folder'], e['level'])])
 for e in level_dummy:
     cur.executemany('INSERT INTO Aery VALUES (?, ?, ?)',
                     [(e['md5'], e['folder'], e['level'])])
@@ -133,20 +137,23 @@ level_list = ['1', '2', '3', '4',
               '9', '10', '11', '12', 
               '13', '14', '15', '16', 
               '17', '18', '19', '20', 
-              'DUMMY', 'OLD']
+              '20+', 'DUMMY', 'OLD']
 
 for level in level_list:
     if level == 'DUMMY':
         lr2folder = [f"#COMMAND song.hash   in (SELECT md5 FROM Aery WHERE folder = 'LEVEL DUMMY') \n", "#MAXTRACKS 0\n", "#CATEGORY [5KEYS AERY]\n", f"#TITLE LEVEL DUMMY\n", f"#INFORMATION_A LAST UPDATE: {last_update}\n", "#INFORMATION_B\n"]
-        f = open(table_folder + f'/0021.lr2folder', 'w')
+        f = open(table_folder + f'/0022.lr2folder', 'w')
 
     elif level == 'OLD':
         lr2folder = [f"#COMMAND song.hash   in (SELECT md5 FROM Aery WHERE folder = 'OLD CHARTS') \n", "#MAXTRACKS 0\n", "#CATEGORY [5KEYS AERY]\n", f"#TITLE OLD CHARTS\n", f"#INFORMATION_A LAST UPDATE: {last_update}\n", "#INFORMATION_B\n"]
-        f = open(table_folder + f'/0022.lr2folder', 'w')
+        f = open(table_folder + f'/0023.lr2folder', 'w')
         
     else:
         lr2folder = [f"#COMMAND song.hash   in (SELECT md5 FROM Aery WHERE folder = 'LEVEL {level}') \n", "#MAXTRACKS 0\n", "#CATEGORY [5KEYS AERY]\n", f"#TITLE LEVEL {level}\n", f"#INFORMATION_A LAST UPDATE: {last_update}\n", "#INFORMATION_B\n"]
-        if int(level) <= 9:
+        if level == '20+':
+            f = open(table_folder + f'/0021.lr2folder', 'w')
+        
+        elif int(level) <= 9:
             f = open(table_folder + f'/000{level}.lr2folder', 'w')
             
         else:
